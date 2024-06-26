@@ -17,4 +17,10 @@ const App: React.FC = () => {
           <h1>Cart</h1>
           <Cart />
         </div>
-      </Qu
+      </QueryClientProvider>
+    </Provider>
+  );
+};
+
+export default App;
+
