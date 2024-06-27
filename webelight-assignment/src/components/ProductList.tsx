@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProductList.css';
 import { useProducts } from '../queries';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/slices/productSlice';
@@ -13,9 +14,9 @@ const ProductList: React.FC = () => {
   return (
     <div>
       {data.map((product: any) => (
-        <div key={product.id}>
+        <div key={product.id} className='product-item'>
           <h3>{product.name}</h3>
-          <p>{product.price}</p>
+          <p>Rs. {product.price}</p>
           <button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
         </div>
       ))}
